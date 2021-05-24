@@ -1,0 +1,23 @@
+.cards {
+  display: flex;
+  margin: 0 -16px;
+}
+.card-item {
+  width: 277px;
+  margin: 0 16px;
+  img {
+    transition: all 0.5s ease;
+  }
+  img:hover {
+    transform: scale(1.05);
+  }
+}
+.doc-about {
+  margin-top: 15px;
+}
+.doc-name {
+  margin-bottom: 5px;
+}
+.doc-prof {
+  color: $gray;
+}

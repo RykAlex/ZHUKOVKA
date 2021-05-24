@@ -1,3 +1,6 @@
+header {
+  margin-bottom: 100px;
+}
 .header-top {
   margin-bottom: 25px;
   display: flex;
@@ -55,9 +58,5 @@
   }
   .phone:hover {
     transform: scale(1.05);
-  }
-  .btn-main:hover {
-    cursor: pointer;
-    background: $blue-dark;
   }
 }

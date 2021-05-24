@@ -1,11 +1,43 @@
 .btn-main {
   color: $white;
   background: $blue;
-  width: 208px;
-  height: 56px;
   text-align: center;
   vertical-align: middle;
-  padding: 18.5px 48px;
+  padding: 18px 48px;
   border-radius: 4px;
   transition: all 0.5s linear;
+  &:hover {
+    cursor: pointer;
+    background: $blue-dark;
+  }
+}
+.btn-all {
+  color: $blue;
+  text-transform: uppercase;
+  background: $white;
+  text-align: center;
+  letter-spacing: 0.16em;
+  padding: 18px 48px;
+  border-radius: 4px;
+  border: 1px solid $blue;
+  transition: all 0.5s linear;
+  &:hover {
+    color: $white;
+    background: $blue-dark;
+    cursor: pointer;
+  }
+}
+.btn-form {
+  color: $white;
+  background: $blue;
+  text-align: center;
+  vertical-align: middle;
+  padding: 18px 48px;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.5s linear;
+  &:hover {
+    cursor: pointer;
+    background: $blue-dark;
+  }
 }

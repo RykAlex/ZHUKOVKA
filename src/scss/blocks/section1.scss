@@ -1,0 +1,58 @@
+section {
+  margin-bottom: 110px;
+}
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 45px;
+}
+.section-main {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.card {
+  width: 50%;
+  max-width: 583px;
+  border: 1px solid $gray-light;
+  border-radius: 16px;
+  margin: 0 15px;
+  margin-bottom: 40px;
+}
+.card-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 33px;
+}
+.card-text {
+  width: 50%;
+}
+.card-title {
+  padding-bottom: 8px;
+}
+.card-subtitle {
+  padding-bottom: 35px;
+  @extend body;
+  color: $gray;
+}
+.card-price {
+  color: $blue;
+}
+.card-img {
+  width: 50%;
+  width: 190px;
+  height: 289px;
+  position: relative;
+  img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    object-fit: contain;
+  }
+}
+.doc-card {
+  display: flex;
+  flex-direction: column;
+}

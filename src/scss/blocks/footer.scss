@@ -1,0 +1,65 @@
+.footer .container {
+  display: flex;
+}
+.column {
+  width: 40%;
+}
+.column h4 {
+  margin-bottom: 27px;
+}
+.column ul li {
+  @extend body;
+  color: $gray;
+}
+ul a {
+  margin-bottom: 24px;
+}
+.footer-phone {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.title-phone {
+  margin-bottom: 11px;
+}
+.footer-phone .phone-footer {
+  margin-bottom: 2px;
+}
+.title-address {
+  margin-bottom: 11px;
+}
+.address {
+  color: $gray;
+}
+.docums {
+  display: flex;
+  flex-direction: column;
+}
+.license {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.bank-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 33px;
+}
+
+.license-title,
+.bank-details {
+  @extend .caption;
+  color: $gray;
+}
+.offer-agreement {
+  margin-bottom: 25px;
+}
+.logo-footer {
+  margin-bottom: 22px;
+}
+.no-publish.caption {
+  margin-bottom: 20px;
+}
+.made-in.caption {
+  color: $dark;
+}

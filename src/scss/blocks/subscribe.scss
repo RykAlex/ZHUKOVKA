@@ -1,0 +1,101 @@
+.subscribe {
+  background: linear-gradient(270.17deg, #d0daea 0.11%, #f5f5f5 99.15%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.subscribe-content {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 104px;
+  padding-top: 93px;
+  position: relative;
+  height: 512px;
+  .subscribe-left {
+    width: 100%;
+    max-width: 480px;
+  }
+  .subscribe-title {
+    margin-bottom: 16px;
+  }
+  .subscribe-text {
+    font-size: 20px;
+    line-height: 136%;
+    margin-bottom: 40px;
+  }
+}
+
+.subscribe-right {
+  img {
+    position: absolute;
+    width: 50%;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    z-index: 1;
+    object-fit: contain;
+  }
+}
+label {
+  display: flex;
+  height: 56px;
+  width: 273px;
+  background: #ffffff;
+  border-radius: 4px;
+  margin-bottom: 18px;
+  position: relative;
+}
+.input-all {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 15px 45px 15px 19px;
+}
+input {
+  border: none;
+  background: none;
+  font-family: Manrope;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  color: $gray-light;
+  outline: none;
+  color: $dark;
+  margin-right: -65px;
+}
+.tel-suf {
+  font-family: Manrope;
+  font-weight: 400;
+  font-size: 22px;
+  width: 32px;
+  height: 31px;
+  line-height: 136%;
+  margin-right: 2px;
+}
+.checkbox {
+  display: flex;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    left: -1px;
+    top: -1px;
+    object-fit: cover;
+    z-index: 2;
+    background: $white;
+  }
+}
+
+.caption-sub {
+  position: absolute;
+  left: 40px;
+  top: 0;
+  z-index: 2;
+  width: 350px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 136%;
+  color: $gray;
+}
