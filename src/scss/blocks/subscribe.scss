@@ -47,7 +47,7 @@ label {
   display: flex;
   align-items: center;
   position: relative;
-  padding: 15px 45px 15px 19px;
+  padding: 15px 19px 15px 19px;
 }
 input {
   border: none;
@@ -59,7 +59,6 @@ input {
   color: $gray-light;
   outline: none;
   color: $dark;
-  margin-right: -65px;
 }
 .tel-suf {
   font-family: Manrope;
@@ -90,7 +89,7 @@ input {
 
 .caption-sub {
   position: absolute;
-  left: 40px;
+  left: 56px;
   top: 0;
   z-index: 2;
   width: 350px;
@@ -160,7 +159,7 @@ label.label-check {
   background: none;
 }
 .label-check {
-  margin-left: 52px;
+  margin-left: -13px;
 }
 .checkbox-text {
   position: absolute;
