@@ -99,77 +99,52 @@ input {
   color: $gray;
 }
 
-/* Создание пользовательского чекбокса*/
-/* 1.Спрячем стандартный чекбокс с помощью opacity: 0:*/
 .checkbox input[type="checkbox"] {
   opacity: 0;
 }
-
-/* 2 шаг. создаем поддельный чекбокс из псевдоэлементов*/
-/*внешний блок*/
-.checkbox label.label-check::before {
+.checkbox .consent:before {
   content: url("/assets/img/icons/white_block.svg");
-  display: inline-block;
-  height: 24px;
   width: 24px;
+  height: 24px;
+  display: inline-block;
   cursor: pointer;
-}
-/*создание галки*/
-.checkbox label.label-check::after {
-  content: url("/assets/img/icons/check.svg");
-  display: inline-block;
-  height: 24px;
-  width: 24px;
-}
-
-/*позиционирование внешнего блока и галки*/
-.checkbox label.label-check {
+  margin-right: 15px;
   position: relative;
 }
-.checkbox label.label-check::before,
-.checkbox label.label-check::after {
+.checkbox .consent:after {
+  content: url("/assets/img/icons/check.svg");
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 15px;
   position: absolute;
-}
-/*Внешний блок*/
-.checkbox label.label-check::before {
-  top: 0;
-}
-/*Галка*/
-.checkbox label.label-check::after {
+  top: 3px;
   left: 6px;
-  top: 2px;
 }
-/* 3 шаг. показываем и прячем галку по состоянию чекбокса*/
-
-/*Прячем галку по умолчанию*/
-.checkbox input[type="checkbox"] + label.label-check::after {
+.checkbox input[type="checkbox"] + .consent::after {
   content: none;
 }
-/*Показываем галку по состоянию checked*/
-.checkbox input[type="checkbox"]:checked + label.label-check::after {
+.checkbox input[type="checkbox"]:checked + .consent:after {
   content: url("/assets/img/icons/check.svg");
 }
-/*Шаг 4: добавляем в стили псевдокласс focus, чтобы сделать чекбокс доступным*/
-/*Добавляем фокус к внешнему блоку поддельного чекбокса*/
-.checkbox input[type="checkbox"]:focus + label.label-check::before {
+
+input[type="checkbox"]:checked + label {
+  color: $dark;
 }
 
-label.label-check {
+.consent {
   position: relative;
   background: none;
-}
-.label-check {
-  margin-left: -13px;
-}
-.checkbox-text {
+  margin-left: -40px;
   position: absolute;
   left: 40px;
   top: 0;
-  width: 348px;
+  width: 388px;
   font-family: Manrope;
   font-weight: 500;
   font-size: 13px;
   line-height: 18px;
-
+  cursor: pointer;
   color: #737881;
 }
