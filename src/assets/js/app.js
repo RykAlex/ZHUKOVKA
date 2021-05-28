@@ -27,15 +27,15 @@ $(document).ready(function () {
   $(".next").on("click", function () {
     slide.slick("slickNext");
   });
-
-  const input = document.body.querySelector(".telmask");
-
-  input.addEventListener("keypress", (evt) => {
-    if (evt.keyCode < 47 || evt.keyCode > 57) {
-      evt.preventDefault();
-    }
+  /* Пометки для себя============
+ ================================= */
+  /* С помощью регулярного выражения запрещаем ввод всего кроме цифр*/
+  document.querySelector(".telmask").addEventListener("input", function (e) {
+    this.value = this.value.replace(/[^0-9\.]/g, "");
   });
 
+  /* Ввод +7 при нажатии на поле инпута*/
+  const input = document.body.querySelector(".telmask");
   input.addEventListener("focus", () => {
     if (input.value.length === 0) {
       input.value = "+7";
@@ -58,38 +58,10 @@ $(document).ready(function () {
     }
   });
 
+  /* Не дает удалять +7 */
   input.addEventListener("keydown", (evt) => {
     if (evt.key === "Backspace" && input.value.length <= 2) {
       evt.preventDefault();
     }
   });
-
-  var inp = document.getElementById("inp");
-
-  // inp.onclick = function () {
-  //  inp.value = "+";
-  //};
-
-  var old = 0;
-
-  inp.onkeydown = function () {
-    var curLen = inp.value.length;
-
-    if (curLen < old) {
-      old--;
-      return;
-    }
-
-    if (curLen == 2) inp.value = inp.value + "(";
-
-    if (curLen == 6) inp.value = inp.value + ")-";
-
-    if (curLen == 11) inp.value = inp.value + "-";
-
-    if (curLen == 14) inp.value = inp.value + "-";
-
-    if (curLen > 16) inp.value = inp.value.substring(0, inp.value.length - 1);
-
-    old++;
-  };
 });
