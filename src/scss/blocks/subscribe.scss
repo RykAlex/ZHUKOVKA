@@ -108,6 +108,7 @@ input.checkbox {
   height: 24px;
   position: relative;
   margin-right: 15px;
+  -moz-appearance: initial;
 }
 input:before {
   content: url("/assets/img/icons/white_block.svg");
@@ -117,7 +118,6 @@ input:before {
   top: 0;
   left: 0;
   visibility: visible;
-  -moz-appearance: initial;
 }
 input:after {
   content: url("/assets/img/icons/check.svg");
@@ -127,7 +127,6 @@ input:after {
   top: -6px;
   left: 6px;
   visibility: visible;
-  -moz-appearance: initial;
 }
 label.text {
   background: none;
