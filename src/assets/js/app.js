@@ -29,9 +29,10 @@ $(document).ready(function () {
   });
   /* Пометки для себя============
  ================================= */
+
   /* С помощью регулярного выражения запрещаем ввод всего кроме цифр*/
   document.querySelector(".telmask").addEventListener("input", function (e) {
-    this.value = this.value.replace(/[^0-9\.]/g, "");
+    this.value = this.value.replace(/[^0-9\./+/./(/./)-/./-/./)/]/g, "");
   });
 
   /* Ввод +7 при нажатии на поле инпута*/
@@ -64,4 +65,28 @@ $(document).ready(function () {
       evt.preventDefault();
     }
   });
+  var inp = document.getElementById("inp");
+
+  var old = 0;
+
+  inp.onkeydown = function () {
+    var curLen = inp.value.length;
+
+    if (curLen < old) {
+      old--;
+      return;
+    }
+
+    if (curLen == 2) inp.value = inp.value + "(";
+
+    if (curLen == 6) inp.value = inp.value + ")-";
+
+    if (curLen == 11) inp.value = inp.value + "-";
+
+    if (curLen == 14) inp.value = inp.value + "-";
+
+    if (curLen > 16) inp.value = inp.value.substring(0, inp.value.length - 1);
+
+    old++;
+  };
 });
