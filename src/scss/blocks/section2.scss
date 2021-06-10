@@ -5,6 +5,7 @@
 .card-item {
   width: 277px;
   margin: 0 16px;
+  margin-bottom: 15px;
   img {
     transition: all 0.5s ease;
   }
@@ -20,4 +21,14 @@
 }
 .doc-prof {
   color: $gray;
+}
+@media screen and (max-width: $tablet) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
 }

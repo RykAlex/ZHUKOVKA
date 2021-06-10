@@ -41,3 +41,11 @@
     background: $blue-dark;
   }
 }
+@media screen and (max-width: $tablet) {
+  .btn-main {
+    padding: 9px 15px;
+  }
+  .btn-main h4 {
+    font-size: 11px;
+  }
+}

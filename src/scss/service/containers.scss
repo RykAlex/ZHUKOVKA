@@ -1,30 +1,31 @@
 .container {
-	width: 100%;
-	max-width: 1200px;
-	margin: auto;
-	position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
 
-	&-wide {
-		width: 100%;
-		max-width: 960px;
-		margin: auto;
-	}
+  &-wide {
+    width: 100%;
+    max-width: 960px;
+    margin: auto;
+  }
 
-	&-medium {
-		width: 100%;
-		max-width: 760px;
-		margin: auto;
-	}
+  &-medium {
+    width: 100%;
+    max-width: 760px;
+    margin: auto;
+  }
 
-	&-small {
-		width: 100%;
-		max-width: 680px;
-		margin: auto;
-	}
-	@media screen and (max-width: $tablet) {
-	}
+  &-small {
+    width: 100%;
+    max-width: 680px;
+    margin: auto;
+  }
+  @media screen and (max-width: $tablet) {
+    padding: 0 16px;
+  }
 
-	@media screen and (max-width: $mobile) {
-		padding: 0 16px;
-	}
+  @media screen and (max-width: $mobile) {
+    padding: 0 16px;
+  }
 }

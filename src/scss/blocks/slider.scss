@@ -10,7 +10,8 @@
 
 .content-slider {
   display: flex;
-  height: 100%;
+
+  height: 360px;
   padding-left: 40px;
 }
 .left {
@@ -29,15 +30,19 @@
 }
 .right {
   width: 43%;
+
   img {
     width: 433px;
     height: 354px;
     object-fit: contain;
+    position: absolute;
+    bottom: 0;
+    right: 70px;
   }
 }
 .arrows {
   position: absolute;
-  bottom: 20px;
+  bottom: 40px;
   right: 20px;
   z-index: 3;
 }
@@ -62,4 +67,56 @@
 .prev:hover path {
   fill: $dark;
   cursor: pointer;
+}
+
+@media screen and (max-width: $tablet) {
+}
+@media screen and (max-width: $mobile) {
+  .slider {
+    width: 100%;
+    max-width: 637px;
+  }
+  .slide-item {
+    width: 600px;
+  }
+  .slider {
+    position: relative;
+  }
+  .slide {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 76%;
+  }
+  .right {
+    width: 100%;
+
+    img {
+      width: 313px;
+      height: 235px;
+      object-fit: cover;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+    }
+  }
+  .content-slider {
+    flex-wrap: wrap;
+    height: 420px;
+    padding-left: 15px;
+  }
+  .arrows {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 3;
+  }
+  .caption-slider {
+    padding-top: 20px;
+  }
+  .slide-item {
+    width: calc(100vw - 16px);
+  }
 }

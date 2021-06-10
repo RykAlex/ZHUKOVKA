@@ -36,3 +36,10 @@
     transition: width 0.2s linear;
   }
 }
+@media screen and (max-width: $tablet) {
+  nav {
+    display: none;
+  }
+}
+@media screen and (max-width: $mobile) {
+}

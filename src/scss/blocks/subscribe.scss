@@ -149,3 +149,23 @@ input[type="checkbox"]:checked:after {
 input[type="checkbox"]:checked + label {
   color: $dark;
 }
+@media screen and (max-width: $tablet) {
+  .subscribe-right {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .subscribe-content {
+    flex-direction: column;
+
+    padding-left: 10px;
+    padding-top: 40px;
+  }
+  .container,
+  form,
+  label {
+    display: flex;
+    flex-direction: column;
+  }
+}
