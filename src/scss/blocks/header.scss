@@ -1,4 +1,4 @@
-header {
+.header {
   margin-bottom: 100px;
 }
 .burger {
@@ -8,10 +8,8 @@ header {
   margin-bottom: 25px;
   display: flex;
   margin-top: 30px;
-  justify-content: space-between;
   align-items: center;
-  height: 56px;
-  flex-shrink: 1;
+
   position: relative;
 }
 .header-left {
@@ -62,6 +60,9 @@ header {
   right: 0;
 }
 @media screen and (max-width: $tablet) {
+  .header {
+    margin-bottom: 16px;
+  }
   .header-top {
     display: flex;
     flex-direction: column;
@@ -77,7 +78,8 @@ header {
       object-fit: cover;
     }
   }
-  .btn-main {
+  .btn-main,
+  .header-right {
     display: none;
   }
   .burger {
@@ -86,9 +88,13 @@ header {
 }
 
 @media screen and (max-width: $mobile) {
+  header {
+    margin-bottom: 16px;
+  }
   .header-top {
-    height: 208px;
+    height: 100%;
     margin-bottom: 0;
+    margin-top: 20px;
   }
   .header-right {
     width: 100%;
@@ -104,12 +110,12 @@ header {
   }
   .header-all {
     padding-left: 15px;
-    margin-top: 22px;
+    margin-top: 20px;
     margin-bottom: 16px;
     border: 1px solid #dce1e6;
     box-sizing: border-box;
     border-radius: 8px;
-    min-width: 343px;
+    min-width: 288px;
     width: 100%;
     height: 64px;
     position: relative;
@@ -122,12 +128,12 @@ header {
   }
   .header-address {
     padding-left: 15px;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
     border: 1px solid #dce1e6;
     box-sizing: border-box;
     border-radius: 8px;
-    min-width: 343px;
+    min-width: 288px;
     width: 100%;
     height: 64px;
     position: relative;
@@ -145,8 +151,7 @@ header {
   }
 
   .header-left {
-    width: 50%;
-    margin-right: 56px;
+    width: 57%;
   }
 
   .header-right {

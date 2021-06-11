@@ -5,7 +5,7 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay: false,
+    autoplay: true,
     fade: true,
     autoplaySpeed: 2000,
     responsive: [
@@ -13,9 +13,8 @@ $(document).ready(function () {
         breakpoint: 799,
         settings: {
           slidesToShow: 1,
-          variableWidth: true,
           centerMode: true,
-          autoplay: true,
+          autoplay: false,
         },
       },
     ],
