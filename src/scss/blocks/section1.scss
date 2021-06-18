@@ -6,6 +6,7 @@ section {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 45px;
+  margin-top: 100px;
 }
 .section-main {
   display: flex;
@@ -55,4 +56,108 @@ section {
 .doc-card {
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: $tablet) {
+  .section-top .btn-all {
+    display: none;
+  }
+  .section-top {
+    margin-bottom: 24px;
+    margin-top: 50px;
+  }
+  .section-main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container .section-main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .card {
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .card-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+  }
+  .card-text {
+    width: 100%;
+  }
+  .card-title {
+    padding-bottom: 8px;
+  }
+  .card-subtitle {
+    padding-bottom: 8px;
+    color: $gray;
+  }
+  .card-price {
+    color: $blue;
+  }
+  .card-img {
+    position: relative;
+    width: 288px;
+    height: 208px;
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+@media screen and (max-width: $mobile) {
+  .section-top .btn-all {
+    display: none;
+  }
+  .section-top {
+    margin-bottom: 24px;
+    margin-top: 50px;
+  }
+  .section-main {
+    flex-direction: column;
+  }
+  .card {
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  .card-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+  }
+  .card-text {
+    width: 100%;
+  }
+  .card-title {
+    padding-bottom: 8px;
+  }
+  .card-subtitle {
+    padding-bottom: 8px;
+    color: $gray;
+  }
+  .card-price {
+    color: $blue;
+  }
+  .card-img {
+    width: 288px;
+    height: 208px;
+    position: relative;
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
 }
