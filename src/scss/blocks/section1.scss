@@ -11,15 +11,13 @@ section {
 .section-main {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -15px;
+  margin: 0 -18px;
 }
 .card {
-  width: 50%;
-  max-width: 583px;
+  width: 47%;
   border: 1px solid $gray-light;
   border-radius: 16px;
-  margin: 0 15px;
-  margin-bottom: 40px;
+  margin: 0 18px 40px;
 }
 .card-items {
   display: flex;
@@ -28,7 +26,7 @@ section {
   padding-left: 33px;
 }
 .card-text {
-  width: 50%;
+  max-width: 325px;
 }
 .card-title {
   padding-bottom: 8px;
@@ -61,29 +59,19 @@ section {
   .section-top .btn-all {
     display: none;
   }
-  .section-top {
-    margin-bottom: 24px;
-    margin-top: 50px;
-  }
   .section-main {
     display: flex;
     flex-wrap: wrap;
   }
-  .container .section-main {
-    padding-left: 0;
-    padding-right: 0;
-  }
   .card {
+    width: 100%;
     border-radius: 8px;
-    margin-bottom: 20px;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0 0 20px;
   }
   .card-items {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 15px;
   }
   .card-text {
     width: 100%;
@@ -93,14 +81,14 @@ section {
   }
   .card-subtitle {
     padding-bottom: 8px;
-    color: $gray;
   }
   .card-price {
     color: $blue;
   }
   .card-img {
+    width: 100%;
     position: relative;
-    width: 288px;
+
     height: 208px;
     img {
       position: absolute;
@@ -123,20 +111,21 @@ section {
     flex-direction: column;
   }
   .card {
+    width: 100%;
     border-radius: 8px;
     margin-bottom: 20px;
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
   }
   .card-items {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding-left: 15px;
+    position: relative;
   }
   .card-text {
-    width: 100%;
+    padding-top: 20px;
+
+    min-width: 172px;
   }
   .card-title {
     padding-bottom: 8px;
@@ -149,15 +138,19 @@ section {
     color: $blue;
   }
   .card-img {
-    width: 288px;
-    height: 208px;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+
     position: relative;
+    flex-shrink: 0;
     img {
       position: absolute;
       bottom: 0;
-      right: 0;
-      height: 100%;
+      right: 20px;
       object-fit: contain;
+      z-index: -1;
     }
   }
 }
