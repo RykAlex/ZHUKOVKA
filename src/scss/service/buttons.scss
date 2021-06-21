@@ -48,4 +48,12 @@
   .btn-main h4 {
     font-size: 11px;
   }
+  .section-main {
+    flex-direction: column;
+  }
+  .btn-all {
+    width: 100%;
+    display: block;
+    align-items: center;
+  }
 }
