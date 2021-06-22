@@ -1,14 +1,12 @@
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 -19px;
-  height: 384px;
+  margin: 0 -15px;
 }
 .card-item {
-  margin: 0 16px;
   margin-bottom: 15px;
-  width: 277px;
+  width: calc(25% - 30px);
+  margin: 0 15px;
 
   img {
     transition: all 0.5s ease;
@@ -17,9 +15,7 @@
     transform: scale(1.05);
   }
 }
-.cards a {
-  display: flex;
-}
+
 .doc-about {
   margin-top: 15px;
 }
@@ -30,20 +26,18 @@
   color: $gray;
 }
 @media screen and (max-width: $tablet) {
-  .cards {
-    margin: 0 -26px;
-    height: 180px;
+  .section-top-m {
+    display: block;
   }
   .card-item {
-    width: 50%;
-    margin: 0 8px;
     margin-bottom: 15px;
+    width: calc(50% - 30px);
   }
 }
 
 @media screen and (max-width: $mobile) {
   .card-item {
-    margin: 0 8px;
     margin-bottom: 15px;
+    width: calc(50% - 30px);
   }
 }
