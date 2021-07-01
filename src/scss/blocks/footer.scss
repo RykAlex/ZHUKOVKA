@@ -13,12 +13,12 @@
 .column ul li {
   @extend body;
   color: $gray;
-}
-ul a {
-  margin-bottom: 24px;
   &:hover {
     color: $blue;
   }
+}
+ul a {
+  margin-bottom: 24px;
 }
 .footer-phone {
   display: flex;
@@ -81,7 +81,7 @@ ul a {
   }
 }
 
-.license-title,
+.license,
 .bank-details {
   @extend .caption;
   color: $gray;
