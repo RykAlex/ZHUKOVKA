@@ -1,5 +1,5 @@
 .header {
-  margin-bottom: 100px;
+  margin-bottom: 30px;
 }
 .burger {
   display: none;
@@ -84,6 +84,7 @@
   }
   .burger {
     display: flex;
+    cursor: pointer;
   }
 }
 
@@ -105,9 +106,7 @@
   .btn-main {
     display: none;
   }
-  .burger {
-    display: flex;
-  }
+
   .header-all {
     padding-left: 15px;
     margin-top: 20px;

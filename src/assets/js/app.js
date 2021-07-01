@@ -89,9 +89,47 @@ $(document).ready(function () {
     old++;
   };
 
-  $(".accordion").accordion({
-    active: true,
-    heightStyle: "content",
-    header: "> .accordion-item > .accordion-header",
+  $(".toggle").click(function () {
+    $(".panel").slideToggle("slow");
+  });
+  $(".toggle2").click(function () {
+    $(".panel2").slideToggle("slow");
+  });
+  $(".toggle3").click(function () {
+    $(".panel3").slideToggle("slow");
+  });
+  $(".toggle").click(function () {
+    $(".panel").slideToggle("slow");
+  });
+
+  let burger = document.querySelector(".burger img");
+
+  burger.addEventListener("click", function () {
+    let navModal = document.querySelector(".nav-modal");
+    navModal.classList.add("show");
+  });
+  let close = document.querySelector(".nav-modal .close");
+  close.addEventListener("click", function () {
+    let navModal = document.querySelector(".nav-modal");
+    navModal.classList.remove("show");
+  });
+
+  let acc = document.getElementsByClassName("accordion");
+  let i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      let panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+  $(".map_toggle").click(function (e) {
+    $(".map").fadeToggle(300);
+    e.preventDefault();
   });
 });

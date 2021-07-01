@@ -16,6 +16,9 @@
 }
 ul a {
   margin-bottom: 24px;
+  &:hover {
+    color: $blue;
+  }
 }
 .footer-phone {
   display: flex;
@@ -27,12 +30,18 @@ ul a {
 }
 .footer-phone .phone-footer {
   margin-bottom: 2px;
+  &:hover {
+    color: $blue;
+  }
 }
 .title-address {
   margin-bottom: 11px;
 }
 .address {
   color: $gray;
+  &:hover {
+    color: $blue;
+  }
 }
 .header-address {
   display: flex;
@@ -52,6 +61,9 @@ ul a {
     width: 27px;
     height: 32px;
     object-fit: cover;
+    &:hover {
+      color: $blue;
+    }
   }
 }
 .bank-details {
@@ -63,6 +75,9 @@ ul a {
     width: 27px;
     height: 32px;
     object-fit: cover;
+    &:hover {
+      color: $blue;
+    }
   }
 }
 
@@ -70,9 +85,20 @@ ul a {
 .bank-details {
   @extend .caption;
   color: $gray;
+  &:hover {
+    color: $blue;
+  }
 }
 .offer-agreement {
   margin-bottom: 25px;
+  &:hover {
+    color: $blue;
+  }
+}
+.policy {
+  &:hover {
+    color: $blue;
+  }
 }
 .logo-footer {
   margin-bottom: 22px;
@@ -82,4 +108,7 @@ ul a {
 }
 .made-in.caption {
   color: $dark;
+}
+
+@media screen and (max-width: $tablet) {
 }
