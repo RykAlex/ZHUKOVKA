@@ -2,6 +2,11 @@
   display: none;
   margin-bottom: 50px;
 }
+.panel ul a {
+  &:hover {
+    color: $blue;
+  }
+}
 
 @media screen and (max-width: $tablet) {
   .footer {
