@@ -89,19 +89,6 @@ $(document).ready(function () {
     old++;
   };
 
-  $(".toggle").click(function () {
-    $(".panel").slideToggle("slow");
-  });
-  $(".toggle2").click(function () {
-    $(".panel2").slideToggle("slow");
-  });
-  $(".toggle3").click(function () {
-    $(".panel3").slideToggle("slow");
-  });
-  $(".toggle").click(function () {
-    $(".panel").slideToggle("slow");
-  });
-
   let burger = document.querySelector(".burger img");
 
   burger.addEventListener("click", function () {
@@ -114,22 +101,10 @@ $(document).ready(function () {
     navModal.classList.remove("show");
   });
 
-  let acc = document.getElementsByClassName("accordion");
-  let i;
-
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      let panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
-    });
-  }
-  $(".map_toggle").click(function (e) {
-    $(".map").fadeToggle(300);
-    e.preventDefault();
+  let accordion = document.querySelector(".accordion");
+  accordion.addEventListener("click", function () {
+    accordion.classList.toggle("active");
+    let panel = document.querySelector(".panel");
+    panel.classList.toggle("show");
   });
 });

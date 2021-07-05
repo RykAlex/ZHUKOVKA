@@ -48,10 +48,11 @@
 
   .panel {
     padding: 0 18px;
-
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+  }
+  .show {
+    max-height: 100px;
   }
   .logo-footer {
     margin-top: 50px;
