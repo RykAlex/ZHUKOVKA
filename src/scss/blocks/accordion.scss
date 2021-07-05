@@ -16,7 +16,6 @@
     display: block;
     flex-direction: column;
   }
-
   .accordion {
     color: #444;
     cursor: pointer;
@@ -52,7 +51,8 @@
     overflow: hidden;
   }
   .show {
-    max-height: 100px;
+    display: block;
+    min-height: 175px;
   }
   .logo-footer {
     margin-top: 50px;
