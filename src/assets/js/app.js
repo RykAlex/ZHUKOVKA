@@ -101,18 +101,19 @@ $(document).ready(function () {
     navModal.classList.remove("show");
   });
 
-  /* let accordion = document.querySelector(".accordion");
-  accordion.addEventListener("click", function () {
-    accordion.classList.toggle("active");
-    let panel = document.querySelector(".panel");
-    panel.classList.toggle("show");
-  });*/
-  let acc = document.getElementsByClassName("accordion");
+  /*let acc = document.getElementsByClassName("accordion");
   let i;
   for (i = 0; i < acc.length; i++) {
     acc[i].onclick = function () {
       this.classList.toggle("active");
       this.nextElementSibling.classList.toggle("show");
     };
-  }
+  }*/
+  let acc = document.getElementsByClassName("accordion");
+  [].forEach.call(acc, function (item, i, acc) {
+    item.addEventListener("click", function (e) {
+      this.classList.toggle("active");
+      this.nextElementSibling.classList.toggle("show");
+    });
+  });
 });

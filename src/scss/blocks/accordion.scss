@@ -52,7 +52,10 @@
   }
   .show {
     display: block;
-    min-height: 175px;
+    height: auto;
+    min-height: 0;
+    transition: max-height 1.5s;
+    max-height: 175px;
   }
   .logo-footer {
     margin-top: 50px;
