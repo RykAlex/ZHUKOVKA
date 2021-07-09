@@ -43,27 +43,25 @@ $(document).ready(function () {
     }
   });
 
-  input.addEventListener("click", (evt) => {
-    if (input.selectionStart < 2) {
-      input.selectionStart = input.value.length;
-    }
-    if (evt.key === "Backspace" && input.value.length <= 2) {
-      evt.preventDefault();
-    }
+  $(".telmask").on("keydown", function (e) {
+    // Запрет выделения ctrl + a
+    if (e.ctrlKey && e.keyCode === 65) return false;
+
+    // Запрет выделения клавишами
+    if (
+      e.shiftKey &&
+      ((e.keyCode === 37 && this.selectionStart < 4) ||
+        (e.keyCode === 39 && this.selectionStart < 3) ||
+        e.keyCode === 38 ||
+        e.keyCode === 40)
+    )
+      return false;
+
+    // Запрет удаления через backspace и del
+    if (e.keyCode == 46 && this.selectionStart < 3) return false;
+    else if (e.keyCode == 8 && this.selectionStart < 4) return false;
   });
 
-  input.addEventListener("blur", () => {
-    if (input.value === "+7") {
-      input.value = "";
-    }
-  });
-
-  /* Не дает удалять +7 */
-  input.addEventListener("keydown", (evt) => {
-    if (evt.key === "Backspace" && input.value.length <= 2) {
-      evt.preventDefault();
-    }
-  });
   var inp = document.getElementById("inp");
 
   var old = 0;
@@ -109,11 +107,20 @@ $(document).ready(function () {
       this.nextElementSibling.classList.toggle("show");
     };
   }*/
-  let acc = document.getElementsByClassName("accordion");
-  [].forEach.call(acc, function (item, i, acc) {
-    item.addEventListener("click", function (e) {
+  let acc = document.querySelectorAll(".accordion-items .accordion");
+
+  acc.forEach(onAccClick);
+
+  function onAccClick(item) {
+    item.addEventListener("click", function () {
       this.classList.toggle("active");
       this.nextElementSibling.classList.toggle("show");
+      let panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
     });
-  });
+  }
 });
