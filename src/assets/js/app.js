@@ -123,4 +123,20 @@ $(document).ready(function () {
       }
     });
   }
+  let a = document.querySelectorAll("[data-scroll]");
+  a.forEach(onClickNav);
+  function onClickNav(item) {
+    item.addEventListener("click", function () {
+      let scrollEl = $(this).data("scroll");
+      let elemPos = $(scrollEl).offset().top;
+      console.log(elemPos);
+      $("html,body").animate(
+        {
+          scrollTop: elemPos,
+        },
+        500
+      );
+      this.classList.toggle("active");
+    });
+  }
 });

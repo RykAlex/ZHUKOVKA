@@ -1,6 +1,5 @@
 .nav {
   border: 1px solid $gray-light;
-  margin-bottom: 38px;
 }
 .nav-container {
   width: 100%;
@@ -35,6 +34,15 @@
     z-index: 1;
     transition: width 0.2s linear;
   }
+}
+.nav-link .active {
+  width: 100%;
+  border: 2px;
+  background-color: $blue;
+  position: absolute;
+  bottom: -27px;
+  left: 0;
+  z-index: 1;
 }
 @media screen and (max-width: $tablet) {
   nav {

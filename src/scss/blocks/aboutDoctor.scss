@@ -1,0 +1,128 @@
+.container-aboutDoc {
+  width: 100%;
+  max-width: 1010px;
+  margin: auto;
+  position: relative;
+}
+section#about {
+  margin-bottom: 70px;
+}
+.section-top {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 45px;
+  margin-top: 100px;
+}
+.section {
+  display: flex;
+}
+
+.section-main {
+  display: flex;
+}
+.about {
+  font-family: Manrope;
+
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  color: $gray;
+  width: 67%;
+}
+.nav-page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 33%;
+  &:after {
+    content: "";
+    height: 100%;
+    width: 2px;
+    position: absolute;
+    background-color: #dce1e6;
+    top: 0;
+    left: 134px;
+    z-index: 1;
+  }
+}
+.nav-page-link {
+  font-family: Manrope;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  line-height: 22px;
+  color: $gray;
+  margin-bottom: 24px;
+  margin-left: 164px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:hover,
+  &.active {
+    color: $dark;
+    cursor: pointer;
+    &:after {
+      width: 20%;
+    }
+  }
+  &:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: $blue;
+    position: absolute;
+    top: 71%;
+    left: -46px;
+    z-index: 10;
+    transform: rotate(90deg);
+  }
+}
+.nav-link-page .active {
+  width: 100%;
+  border: 2px;
+  background-color: $blue;
+  position: absolute;
+  top: 71%;
+  left: -46px;
+  z-index: 10;
+}
+
+.section-top-m {
+  display: none;
+}
+@media screen and (max-width: $tablet) {
+  section {
+    margin-bottom: 56px;
+  }
+  .section-top .btn-all {
+    display: none;
+  }
+  .section-main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .section-main {
+    margin: 0 0;
+  }
+  .section-top {
+    margin-bottom: 24px;
+    margin-top: 50px;
+  }
+
+  .section-top-m {
+    display: flex;
+  }
+}
+@media screen and (max-width: $mobile) {
+  .section-top .btn-all {
+    display: none;
+  }
+
+  .section-main {
+    flex-direction: column;
+    margin: 0;
+  }
+}

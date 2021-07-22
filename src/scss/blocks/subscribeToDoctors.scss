@@ -1,0 +1,42 @@
+.subscribeToDoctors {
+  background: linear-gradient(270.17deg, #d0daea 0.11%, #f5f5f5 99.15%);
+  //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.subscribeToDoctors-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 104px;
+  padding-top: 67px;
+  position: relative;
+  height: 421px;
+  .subscribeToDoctors-left {
+    width: 48%;
+  }
+  .subscribeToDoctors-title {
+    margin-bottom: 8px;
+  }
+  .subscribeToDoctors-text {
+    font-size: 20px;
+    line-height: 136%;
+    margin-bottom: 115px;
+  }
+}
+
+.subscribeToDoctors-right {
+  width: 52%;
+  img {
+    position: absolute;
+
+    bottom: 0;
+    right: 0;
+    height: 93%;
+    z-index: 1;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  @media screen and (max-width: $mobile) {
+  }
+}
