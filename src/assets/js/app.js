@@ -26,6 +26,7 @@ $(document).ready(function () {
   $(".next").on("click", function () {
     slide.slick("slickNext");
   });
+
   /* Пометки для себя============
  ================================= */
 
@@ -124,19 +125,22 @@ $(document).ready(function () {
     });
   }
   let a = document.querySelectorAll("[data-scroll]");
+
   a.forEach(onClickNav);
   function onClickNav(item) {
-    item.addEventListener("click", function () {
+    item.addEventListener("click", function (e) {
       let scrollEl = $(this).data("scroll");
       let elemPos = $(scrollEl).offset().top;
-      console.log(elemPos);
+
+      $("[data-scroll]").removeClass("active");
+
+      e.target.classList.add("active");
       $("html,body").animate(
         {
           scrollTop: elemPos,
         },
         500
       );
-      this.classList.toggle("active");
     });
   }
 });
