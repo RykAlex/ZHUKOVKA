@@ -20,11 +20,26 @@ $(document).ready(function () {
     ],
   });
 
-  $(".prev").on("click", function () {
-    slide.slick("slickPrev");
-  });
-  $(".next").on("click", function () {
-    slide.slick("slickNext");
+  let slideTwo = $(".slide-two");
+  slideTwo.slick({
+    infinity: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: false,
+    variableWidth: true,
+    autoplay: false,
+
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 799,
+        settings: {
+          slidesToShow: 1,
+          centerMode: false,
+          autoplay: false,
+        },
+      },
+    ],
   });
 
   /* Пометки для себя============
