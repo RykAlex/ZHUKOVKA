@@ -23,26 +23,23 @@
 
 .arrows-two {
   position: absolute;
-  bottom: 10%;
+  bottom: 30%;
   right: 0;
-  z-index: 3;
+  overflow: visible;
+  z-index: 10;
 }
-
-.prev-two,
-.next-two {
-  height: 56px;
-  width: 63px;
-  padding: 0;
-
+button.prev-two,
+button.next-two {
+  background: none;
   outline: none;
-  border-radius: 4px;
-  border: 0;
+  border: none;
+
   &:hover {
     cursor: pointer;
   }
 }
 .prev {
-  margin-right: 16px;
+  margin-right: 70px;
 }
 .next:hover path,
 .prev:hover path {
