@@ -4,8 +4,7 @@
 }
 .subscribeToDoctors-content {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+
   padding-left: 104px;
   padding-top: 67px;
   position: relative;
@@ -27,16 +26,40 @@
   width: 52%;
   img {
     position: absolute;
-
     bottom: 0;
     right: 0;
-    height: 93%;
     z-index: 1;
     object-fit: contain;
   }
 }
 
 @media screen and (max-width: $tablet) {
-  @media screen and (max-width: $mobile) {
+  .subscribeToDoctors-content {
+    flex-direction: column;
   }
+  .subscribeToDoctors-content .subscribeToDoctors-left {
+    width: 100%;
+  }
+  .subscribeToDoctors-content .subscribeToDoctors-right {
+    width: 100%;
+  }
+  .subscribeToDoctors-content {
+    padding-left: 0;
+    padding-top: 44px;
+    height: 567px;
+  }
+  .subscribeToDoctors-content .subscribeToDoctors-text {
+    margin-bottom: 16px;
+  }
+  .subscribeToDoctors-right img {
+    width: 320px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+    object-fit: contain;
+  }
+}
+@media screen and (max-width: $mobile) {
 }

@@ -31,14 +31,7 @@ section#about {
   color: $gray;
   width: 67%;
 }
-.subscribeToDoctors-right img {
-  position: absolute;
-  bottom: 0;
-  right: 87px;
-  height: 93%;
-  z-index: 1;
-  object-fit: contain;
-}
+
 .socials {
   margin-top: 35px;
 }
@@ -164,36 +157,80 @@ a svg {
 .section-top-m {
   display: none;
 }
+.nav-page.mobile {
+  display: none;
+}
 @media screen and (max-width: $tablet) {
-  section {
-    margin-bottom: 56px;
+  .container-aboutDoc {
+    padding: 0 16px;
   }
-  .section-top .btn-all {
+  .nav-page {
     display: none;
   }
-  .section-main {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .section-main {
-    margin: 0 0;
+  .nav-page.mobile {
+    display: block;
   }
   .section-top {
-    margin-bottom: 24px;
-    margin-top: 50px;
+    margin-bottom: 21px;
+    margin-top: 54px;
   }
-
-  .section-top-m {
+  .section,
+  .section-main {
     display: flex;
+    flex-direction: column-reverse;
+  }
+  .nav-page {
+    width: 100%;
+  }
+  .nav-page:after {
+    left: 5px;
+  }
+  .nav-page-link {
+    margin-left: 32px;
+  }
+  .subscribeToDoctors-content .subscribeToDoctors-text {
+    font-size: 16px;
+  }
+  .spec-item button {
+    margin-bottom: 8px;
+    margin-right: 10px;
+    padding: 16px 15px;
+  }
+  .about {
+    width: 100%;
+  }
+  .year {
+    min-width: 85px;
+  }
+  .mr-3,
+  a svg {
+    margin-right: 16px;
+  }
+  .mobile > .nav-page-link {
+    font-size: 12px;
+
+    margin-bottom: 24px;
+    margin-left: 38px;
+  }
+  .nav-page-link.active:after,
+  .nav-page-link:hover:after {
+    width: 14%;
+  }
+  .nav-link-page .active,
+  .nav-page-link:after {
+    background-color: #4285f4;
+    position: absolute;
+    top: 47%;
+    left: -49px;
+    z-index: 10;
   }
 }
+
 @media screen and (max-width: $mobile) {
-  .section-top .btn-all {
+  .header-right {
     display: none;
   }
-
-  .section-main {
-    flex-direction: column;
-    margin: 0;
+  .container-aboutDoc {
+    padding: 0 16px;
   }
 }
