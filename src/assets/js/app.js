@@ -19,22 +19,26 @@ $(document).ready(function () {
       },
     ],
   });
-
-  let slideTwo = $(".slide-two");
-  slideTwo.slick({
-    infinity: true,
+  $(".slider-docs").slick({
+    arrows: true,
+    adaptiveHeight: true,
     slidesToShow: 3,
     slidesToScroll: 3,
-    arrows: false,
-    variableWidth: true,
+    speed: 1000,
+    easing: "linear",
+    infinite: true,
+    initialSlide: 1,
     autoplay: false,
-
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
+    pauseOnFocus: true,
+    pauseOnHover: true,
+    variableWidth: false,
     responsive: [
       {
         breakpoint: 799,
         settings: {
-          slidesToShow: 1,
+          arrows: false,
+          slidesToShow: 2,
           centerMode: false,
           autoplay: false,
         },

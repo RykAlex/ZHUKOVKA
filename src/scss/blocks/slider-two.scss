@@ -1,115 +1,65 @@
-.slider-two {
-  width: 100%;
-  max-width: 685px;
+.slick-slider {
+  min-width: 0;
+}
 
-  position: relative;
-
-  left: 50%;
-  transform: translateX(-74%);
+.slick-list {
   overflow: hidden;
 }
-.slick-list-two {
-  overflow: visible;
-  transform: translateX(-228px) !important;
-}
-.slick-slide-two {
-  width: 190px;
+
+.slick-track {
+  display: flex;
+  align-items: flex-start;
 }
 
-.content-slider-two {
-  height: 100%;
-  height: 174px;
+.slider-docs {
+  position: relative;
+  padding: 0px 0px;
+  width: 100%;
+  max-width: 685px;
+}
+.slider-docs .slick-track {
+  position: relative;
+  left: -15px;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.arrows-two {
+.slider-docs .slick-arrow {
   position: absolute;
-  bottom: 30%;
-  right: 0;
-  overflow: visible;
-  z-index: 10;
-}
-button.prev-two,
-button.next-two {
-  background: none;
-  outline: none;
-  border: none;
+  top: 50%;
+  margin: -12px 0px 0px 0px;
 
-  &:hover {
-    cursor: pointer;
-  }
+  z-index: 10;
+  font-size: 0;
+  width: 24px;
+  height: 24px;
+  border: none;
 }
-.prev {
-  margin-right: 70px;
+.slider-docs .slick-arrow.slick-prev {
+  left: -30px;
+  background: url("/assets/img/icons/chevron-left.svg") 0 0 / 100% no-repeat;
 }
-.next:hover path,
-.prev:hover path {
-  fill: $dark;
-  cursor: pointer;
+.slider-docs .slick-arrow.slick-next {
+  right: -30px;
+  background: url("/assets/img/icons/chevron-right.svg") 0 0 / 100% no-repeat;
+}
+.slider-docs .slick-arrow.slick-disabled {
+  opacity: 0.2;
+}
+
+.slider-docs-item {
+  padding: 0px -15px;
+}
+.slider-docs-item img {
+  max-width: 100%;
 }
 
 @media screen and (max-width: $tablet) {
+  .slider-docs-item {
+    height: 110px;
+  }
 }
 @media screen and (max-width: $mobile) {
-  .slide-item {
-    width: 600px;
-  }
-  .slider {
-    position: relative;
-  }
-  .slide {
-    flex-direction: column;
-  }
-
-  .left {
-    width: 100%;
-  }
-  .right {
-    width: 100%;
-
-    img {
-      width: 287px;
-      height: 235px;
-      object-fit: contain;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: -1;
-    }
-  }
-  .content-slider {
-    flex-wrap: wrap;
-    height: 420px;
-    padding-left: 14px;
-    padding-right: 14px;
-  }
-  .arrows {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    z-index: 3;
-  }
-  .caption-slider {
-    padding-top: 20px;
-    padding-bottom: 6px;
-  }
-  .prev,
-  .next {
-    height: 48px;
-    width: 54px;
-  }
-  .prev {
-    margin-right: 8px;
-  }
-  .slider {
-    border-radius: 8px;
-  }
-  .subtitle {
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 16.39px;
-  }
-  .h1-slider {
-    padding-bottom: 8px;
-    width: 100%;
-  }
 }
