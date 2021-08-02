@@ -173,16 +173,9 @@ section #license {
     font-weight: bold;
     font-size: 1.3em;
   }
-  tbody td,
-  tbody th {
-    display: block;
-    text-align: center;
-  }
-  tbody td,
-  tbody th:before {
-    content: attr(data-th);
-    display: block;
-    text-align: center;
+  tr {
+    display: flex;
+    flex-direction: column;
   }
 }
 
