@@ -119,7 +119,7 @@ a svg {
   line-height: 22px;
   color: $gray;
   margin-bottom: 24px;
-  margin-left: 164px;
+  margin-left: 166px;
 
   &:last-child {
     margin-bottom: 0;
@@ -160,6 +160,7 @@ a svg {
 .nav-page.mobile {
   display: none;
 }
+
 @media screen and (max-width: $tablet) {
   .container-aboutDoc {
     padding: 0 16px;

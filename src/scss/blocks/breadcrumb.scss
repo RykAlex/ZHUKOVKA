@@ -1,0 +1,27 @@
+ul.breadcrumb {
+  display: flex;
+  align-items: baseline;
+  list-style: none;
+}
+ul.breadcrumb li {
+  display: inline-flex;
+  align-items: baseline;
+  font-size: 13px;
+}
+mb-3,
+ul a {
+  margin-bottom: 5px;
+}
+ul.breadcrumb li + li:before {
+  padding: 4px;
+  color: black;
+  content: "\2014";
+}
+ul.breadcrumb li a {
+  color: #737881;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #737881;
+  text-decoration: underline;
+}

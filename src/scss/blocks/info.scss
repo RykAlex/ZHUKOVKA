@@ -1,0 +1,190 @@
+#info ul.breadcrumb {
+  margin-top: 35px;
+  padding-left: 104px;
+}
+#requisites h3 {
+  margin-top: 30px;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 104px;
+}
+.info.subtitle {
+  padding-left: 0;
+}
+.info-left {
+  width: 65%;
+}
+.info-right {
+  width: 35%;
+}
+.info .subtitle {
+  font-family: Manrope;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+}
+.nav-page.nav-page-services .nav-page-link {
+  white-space: nowrap;
+}
+.nav-page-services .nav-page {
+  width: 0;
+}
+#requisites {
+  display: inline;
+}
+#requisites h3 {
+  margin-bottom: 35px;
+}
+table {
+  table-layout: auto;
+  width: 680px;
+  white-space: nowrap;
+  border-bottom: 1px solid $gray-light;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+td {
+  text-align: start;
+  border-top: 1px solid $gray-light;
+  font-family: Manrope;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  color: $gray;
+  padding: 15px 0;
+}
+#license h3 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+section #license {
+  margin-bottom: 55px;
+}
+#guarantees {
+  margin-bottom: 55px;
+}
+#guarantees h3 {
+  margin-bottom: 15px;
+}
+.guarantees-text {
+  font-family: Manrope;
+  font-style: 400;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: $blue;
+  max-width: 582px;
+}
+.guarantees-text p {
+  margin-bottom: 30px;
+}
+#medicalworkers {
+  margin-bottom: 55px;
+}
+#medicalworkers h3 {
+  margin-bottom: 25px;
+}
+#operatingmode {
+  margin-bottom: 55px;
+}
+#operatingmode h3 {
+  margin-bottom: 15px;
+}
+#operatingmode .operating {
+  font-family: Manrope;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: $gray;
+
+  max-width: 685px;
+}
+#personaldata {
+  margin-bottom: 0;
+}
+#personaldata h3 {
+  margin-bottom: 15px;
+}
+.personaldata-text {
+  font-family: Manrope;
+  font-style: 400;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: $blue;
+  max-width: 685px;
+}
+.personaldata-text p {
+  margin-bottom: 30px;
+}
+.nav-page .mobile {
+  display: none;
+}
+@media screen and (max-width: $tablet) {
+  .info {
+    flex-direction: column-reverse;
+  }
+  .nav-page .nav-page-services {
+    display: none;
+  }
+  .nav-page .mobile {
+    display: block;
+  }
+  #info .breadcrumb {
+    margin-bottom: 10px;
+  }
+  #requisites {
+    display: block;
+  }
+  .info-left {
+    width: 100%;
+  }
+  .info-right {
+    width: 100%;
+  }
+  #info ul.breadcrumb {
+    padding-left: 5px;
+  }
+
+  .info {
+    padding-left: 0px;
+  }
+  .info-right {
+    white-space: nowrap;
+  }
+  table {
+    width: 100%;
+    white-space: pre-wrap;
+  }
+  thead {
+    display: none;
+  }
+  tr:nth-of-type(2n) {
+    background-color: inherit;
+  }
+  tr td:first-child {
+    background: #f0f0f0;
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+  tr th:first-child {
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+  tbody td,
+  tbody th {
+    display: block;
+    text-align: center;
+  }
+  tbody td,
+  tbody th:before {
+    content: attr(data-th);
+    display: block;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+}
