@@ -1,0 +1,125 @@
+#contacts ul.breadcrumb {
+  margin-top: 35px;
+  padding-left: 104px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 104px;
+}
+.contacts.subtitle {
+  padding-left: 0;
+}
+
+.contacts .subtitle {
+  font-family: Manrope;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+}
+.contacts-left {
+  width: 50%;
+}
+.contacts-right {
+  width: 50%;
+}
+.contacts-all {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+.contacts-tel {
+  margin-bottom: 65px;
+}
+.contacts-tel-title {
+  margin-bottom: 20px;
+}
+.contacts-tel-number {
+  &:hover {
+    color: $blue;
+    cursor: pointer;
+  }
+}
+.contacts-work-title {
+  margin-bottom: 15px;
+}
+.contacts-tel-hours {
+  font-family: Manrope;
+  color: $gray;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+.contacts-right-address a {
+  font-family: Manrope;
+  color: $gray;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  &:hover {
+    cursor: pointer;
+    color: $blue;
+  }
+}
+.contacts-right-address {
+  width: 50%;
+  margin-bottom: 50px;
+}
+.contacts-right-title {
+  margin-top: 20px;
+}
+.contacts-email-title {
+  margin-bottom: 15px;
+}
+.contacts-email-address a {
+  color: $blue;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+section#contacts section#requisites {
+  margin-bottom: 0;
+}
+.map {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 35px;
+}
+@media screen and (max-width: $tablet) {
+  .contacts-all {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contacts-left {
+    width: 100%;
+  }
+  .contacts-right {
+    width: 100%;
+  }
+  .contacts-work {
+    margin-bottom: 20px;
+  }
+
+  #contacts .breadcrumb {
+    margin-bottom: 10px;
+  }
+
+  #contacts ul.breadcrumb {
+    padding-left: 5px;
+  }
+
+  .contacts {
+    padding-left: 0px;
+  }
+  .contacts-tel {
+    margin-bottom: 35px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+}
